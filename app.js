@@ -35,6 +35,8 @@ async function completeLesson(id,v){
 function updateCourseProgress(){
  const files=COURSE?.visibleDriveFiles||COURSE?.driveFiles||[],lessons=COURSE?.modules.flatMap(m=>m.lessons)||[],done=files.filter(f=>f.completed).length+lessons.filter(l=>l.completed).length,total=files.length+lessons.length,started=files.filter(f=>f.viewed&&!f.completed).length+lessons.filter(l=>l.viewed&&!l.completed).length,pct=total?Math.round(done/total*100):0;
  const el=$('courseProgress');if(el)el.innerHTML=`<div class="progress-head"><b>Tu progreso</b><strong>${done} completados · ${started} iniciados · ${total} materiales · ${pct}%</strong></div><div class="progress-track"><span style="width:${pct}%"></span></div>`;
+ const summary=document.querySelector('.playlist-title small');if(summary)summary.textContent=`${total} materiales · ${done} completados · ${started} iniciados`;
+ const pill=document.querySelector('.playlist-title .pill');if(pill)pill.textContent=`${pct}%`;
 }
 async function openDriveAsset(index){
  const files=COURSE.visibleDriveFiles||COURSE.driveFiles||[],f=files[index];if(!f)return;
