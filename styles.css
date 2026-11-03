@@ -58,3 +58,4 @@ body.theme-editorial h1,body.theme-editorial h2,body.theme-editorial h3,body.the
 body.theme-claro .playlist-panel,body.theme-claro .student-progress{background:#fff}body.theme-claro .playlist-item{color:#263247}body.theme-claro .playlist-copy small{color:#69778d}
 @media(max-width:900px){.learning-layout,.settings-layout{grid-template-columns:1fr}.preview-panel{position:static}.playlist-panel{max-height:480px}.content-viewer{max-height:360px}}
 @media(max-width:600px){.playlist-controls{display:grid;grid-template-columns:1fr 1fr}.playlist-controls button{width:100%}.progress-meta{display:grid}.content-viewer{min-height:190px}}
+.preview-top #pvName{display:flex;align-items:center;gap:8px;min-width:0}.preview-logo{display:block;width:auto;height:auto;max-width:145px;max-height:42px;object-fit:contain;flex:0 1 auto}
